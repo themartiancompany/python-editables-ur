@@ -1,0 +1,17 @@
+pkgbase = python-editables
+	pkgdesc = Python library for creating editable wheels
+	pkgver = 0.5
+	pkgrel = 1
+	url = https://github.com/pfmoore/editables
+	arch = any
+	license = MIT
+	checkdepends = python-pytest
+	makedepends = git
+	makedepends = python-build
+	makedepends = python-installer
+	makedepends = python-flit-core
+	depends = python
+	source = python-editables::git+https://github.com/pfmoore/editables#commit=2331418af764ef203959327354335c431978e70d
+	b2sums = SKIP
+
+pkgname = python-editables
