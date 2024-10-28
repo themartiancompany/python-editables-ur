@@ -5,6 +5,15 @@
 # Contributor: Mark Wagie <mark dot wagie at tutanota dot com>
 
 _py="python"
+_pyver="$( \
+  "${_py}" \
+    -V | \
+    awk \
+      '{print $2}')"
+_pymajver="${_pyver%.*}"
+_pyminver="${_pymajver#*.}"
+_pynextver="${_pymajver%.*}.$(( \
+  ${_pyminver} + 1))"
 _pkg=editables
 pkgname="${_py}-${_pkg}"
 pkgver=0.5
@@ -20,7 +29,8 @@ license=(
   'MIT'
 )
 depends=(
-  "${_py}"
+  "${_py}>=${_pymajver}"
+  "${_py}<${_pynextver}"
 )
 makedepends=(
   'git'

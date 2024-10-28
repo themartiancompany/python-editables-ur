@@ -10,7 +10,8 @@ pkgbase = python-editables
 	makedepends = python-build
 	makedepends = python-installer
 	makedepends = python-flit-core
-	depends = python
+	depends = python>=3.12
+	depends = python<3.13
 	source = python-editables::git+https://github.com/pfmoore/editables#commit=2331418af764ef203959327354335c431978e70d
 	b2sums = SKIP
 
